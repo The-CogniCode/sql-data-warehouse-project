@@ -104,9 +104,7 @@ Houses business-ready data modeled into a star schema required for reporting and
 │   └── gold/                          # Scripts for creating analytical models
 ├── tests/                             # Test scripts and quality files
 ├── README.md                          # Project overview and instructions
-├── LICENSE                            # License information for the repository
-├── .gitignore                         # Files and directories to be excluded from version control
-└── requirements.txt                   # Dependencies and requirements for the project
+└── LICENSE                            # License information for the repository
 ```
 
 ---
