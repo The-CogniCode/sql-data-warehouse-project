@@ -1,12 +1,12 @@
 /*
-===============================================================================
-DDL Script: Create Bronze Tables
-===============================================================================
-Script Purpose:
-	This script creates tables in the 'bronze' schema, dropping existing tables
-	if they already exist.
-	Run this script to re-define the DDL structure of 'bronze' Tables
-===============================================================================
+=================================================================================
+DDL Script: Crea Tablas Bronze
+=================================================================================
+Propósito del script:
+	Este script crea tablas en el esquema 'bronze', eliminando las tablas
+	existentes en caso existan.
+	Ejecute el script para redefinir la estructura DDL de las tablas en 'bronze'
+=================================================================================
 */
 
 
