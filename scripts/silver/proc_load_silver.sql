@@ -1,19 +1,21 @@
 /*
 ===============================================================================
-Store Procedure: Load Silver Layer (Bronze -> Silver)
+Procedimiento almacenado: Carga Tabla Silver (Bronze -> Silver)
 ===============================================================================
-Script Purpose:
-	  This store procedure performs the ETL process to populate the 'silver'
-    schema tables from the 'bronze' schema.
-  Actions Performed:
-  -  Truncates Silver tables.
-  - Inserts transformed and cleansed data from Bronze into Silver tables.
+Propósito de script:
+	Este procedimiento almacenado realiza el proceso ETL para rellenar las 
+	tablas del esquema "silver" a partir del esquema "bronze".
 
-Parameters:
+Acciones realizadas:
+	- Trunca las tablas 'silver'.
+	- Inserta datos transformados y depurados de las tablas 'bronze' hacia 
+	las tablas 'silver'.
+
+Parámetros:
 	None.
-  This store procedure does not accept any parametes or return any values.
+	Este procedimiento de tienda no acepta ningún parámetro ni devuelve ningún valor.
 
-Usage Example:
+Ejemplo de Uso:
 		EXEC silver.load_silver;
 ===============================================================================
 */
@@ -63,7 +65,7 @@ BEGIN
 			END AS cst_gndr, -- Normalize gender values to readable format
 			cst_create_date
 		FROM (
-			SELECT 
+			SELECT
 				*,
 				ROW_NUMBER() OVER (PARTITION BY cst_id ORDER BY cst_create_date DESC) AS flag_last
 			FROM bronze.crm_cust_info
