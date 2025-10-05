@@ -17,7 +17,7 @@ Usage Notes:
 
 
 -- =========================================================
--- Checking gold.product_key
+-- Checking gold.customer_key
 -- =========================================================
 -- Check for uniqueness of customer key in gold.dim_customers
 -- Expectation: No results
